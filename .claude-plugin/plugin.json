@@ -1,0 +1,20 @@
+{
+  "name": "prod-ready",
+  "description": "Pre-production security audit, dependency hardening, CI/CD validation, and Docker readiness checks for Claude Code",
+  "version": "1.0.0",
+  "author": {
+    "name": "adibirzu",
+    "url": "https://github.com/adibirzu"
+  },
+  "repository": "https://github.com/adibirzu/claude-prod-ready-plugin",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "security-audit",
+    "production-readiness",
+    "dependency-audit",
+    "cicd-validation",
+    "docker",
+    "devops"
+  ]
+}
