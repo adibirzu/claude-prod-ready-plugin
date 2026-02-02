@@ -110,8 +110,6 @@ installed_file = '$INSTALLED_FILE'
 plugin_name = '${PLUGIN_NAME}@local-plugins'
 cache_path = '$CACHE_VERSION_DIR'
 version = '$PLUGIN_VERSION'
-home = os.path.expanduser('~')
-
 if os.path.exists(installed_file):
     with open(installed_file, 'r') as f:
         data = json.load(f)
@@ -122,12 +120,11 @@ plugins = data.setdefault('plugins', {})
 now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
 
 plugins[plugin_name] = [{
-    'scope': 'project',
+    'scope': 'user',
     'installPath': cache_path,
     'version': version,
     'installedAt': now,
-    'lastUpdated': now,
-    'projectPath': home
+    'lastUpdated': now
 }]
 
 with open(installed_file, 'w') as f:
